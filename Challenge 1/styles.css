@@ -21,7 +21,6 @@ main {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	border: 1px red solid;
 	height: 75vh;
 }
 
