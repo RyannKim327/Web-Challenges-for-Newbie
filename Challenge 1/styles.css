@@ -1,0 +1,72 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+	user-select: none;
+	border: 0;
+}
+
+body{
+	background-image: url('https://img.freepik.com/free-vector/blue-fluid-background_53876-114597.jpg?t=st=1704243105~exp=1704243705~hmac=284c380ec033bcdb8182010f803ef886b4ce5d63907d0d527b75cb1181409fe3');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border: 1px red solid;
+	height: 75vh;
+}
+
+main > div {
+	width: 75%;
+	margin: 1em;
+	display: flex;
+	flex-direction: column;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: space-around;
+}
+
+main > div > div{
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	justify-content: space-between;
+	width: 100%;
+}
+
+main > div > div > span{
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: xxx-large;
+}
+
+main > div > span {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+main > div > span > i{
+	margin: 0 .5em;
+}
+
+@media only screen and (max-width: 720px){
+	main {
+		background-image: url('https://img.freepik.com/free-vector/blue-fluid-background-frame_53876-99019.jpg?w=360&t=st=1704275008~exp=1704275608~hmac=3542aa87448474a94fd894a188be218516e312687541e9e2120c5abe95aa5549');
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
