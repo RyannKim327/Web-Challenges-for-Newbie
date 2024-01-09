@@ -24,40 +24,9 @@ main {
 	height: 75vh;
 }
 
-main > div {
-	width: 75%;
-	margin: 1em;
-	display: flex;
-	flex-direction: column;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	justify-content: space-around;
-}
-
-main > div > div{
-	display: flex;
-	flex-direction: row;
-	align-content: space-between;
-	justify-content: space-between;
+main > #base {
 	width: 100%;
-}
-
-main > div > div > span{
-	cursor: pointer;
-	background-color: rgba(255, 255, 255, 0.5);
-	font-size: xxx-large;
-}
-
-main > div > span {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-main > div > span > i{
-	margin: 0 .5em;
+	
 }
 
 @media only screen and (max-width: 720px){
