@@ -16,17 +16,97 @@ body{
 	background-size: cover;
 }
 
-main {
+main{
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(40px);
 	width: 100%;
+}
+
+main > #base > #img{
+	height: 75vh;
+	overflow: hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	justify-content: center;
+	justify-items: center;
+}
+
+main > #base > #img > img {
+	width: 100%;
+	border-radius: .5em;
+	margin: .5em;
+	transition: 0.6s ease-in-out;
+}
+
+main > #base > #img > .in {
+	animation: slide-in 1s forwards;
+}
+
+main > #base > #img > .out {
+	animation: slide-out 1s;
+}
+
+main > #base > #points{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	height: 75vh;
 }
 
-main > #base {
-	width: 100%;
-	
+main > #base > #points > span{
+	padding: .5em .75em;
+	margin: .15em;
+	border-radius: 1em;
+	background-color: white;
+	color: black;
+}
+
+@keyframes slide-in{
+	from{
+		transform: translate(100%);
+	}to{
+		transform: translate(0%);
+	}
+}
+
+@-webkit-keyframes slide-in{
+	from{
+		transform: translate(100%);
+	}to{
+		transform: translate(0%);
+	}
+}
+
+@-moz-keyframes slide-in{
+	from{
+		transform: translate(100%);
+	}to{
+		transform: translate(0%);
+	}
+}
+
+@keyframes slide-out{
+	from{
+		transform: translate();
+	}to{
+		transform: translate(-100%);
+	}
+}
+
+@-webkit-keyframes slide-out{
+	from{
+		transform: translate(0%);
+	}to{
+		transform: translate(-100%);
+	}
+}
+
+@-moz-keyframes slide-out{
+	from{
+		transform: translate(0%);
+	}to{
+		transform: translate(-100%);
+	}
 }
 
 @media only screen and (max-width: 720px){
