@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  user-select: none;
+  border: 0;
+}
+
+#sudoku {
+  display: grid;
+  grid-template-columns: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
+  grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
+  grid-gap: .225rem;
+}
+
+#sudoku>* {
+  border: 1px black solid;
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
