@@ -15,6 +15,9 @@ function show(position){
 		if(position == 0){
 			point.style.backgroundColor = "#333333"
 			point.style.color = "white"
+		}else{
+			point.style.backgroundColor = "#ffffff"
+			point.style.color = "black"
 		}
 		images.appendChild(img)
 		imgs.push(img)
@@ -39,7 +42,7 @@ window.onload  = () => {
 			imgs[position - 1].classList.add("out")
 			setTimeout(() => {
 				imgs[position - 1].style.display = "none"
-			}, 1000)
+			}, 250)
 			imgs[position - 1].classList.add("in")
 			points[position - 1].style.backgroundColor = "white"
 			points[position - 1].style.color = "black"
@@ -47,7 +50,7 @@ window.onload  = () => {
 			imgs[imageSrc.length - 1].classList.add("out")
 			setTimeout(() => {
 				imgs[imageSrc.length - 1].style.display = "none"
-			}, 1000)
+			}, 250)
 			imgs[imageSrc.length - 1].classList.add("in")
 			points[imageSrc.length - 1].style.backgroundColor = "white"
 			points[imageSrc.length - 1].style.color = "black"
@@ -57,8 +60,15 @@ window.onload  = () => {
 		setTimeout(() => {
 			imgs[position].classList.add("in")
 			imgs[position].style.display = "block"
-		})
-		points[position].style.backgroundColor = "#333333"
-		points[position].style.color = "white"
+		}, 750)
+		for(let x = 0; x < 3; x++){
+			if(position == (x - 1)){
+				points[(position % 3) + 1].style.backgroundColor = "#333333"
+				points[(position % 3) + 1].style.color = "white"
+			}else{
+				points[position].style.backgroundColor = "#ffffff"
+				points[position].style.color = "black"
+			}
+		}
 	}, 2500);
 }

@@ -1,5 +1,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
-*{
+
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -8,7 +9,7 @@
 	border: 0;
 }
 
-body{
+body {
 	background-image: url('https://img.freepik.com/free-vector/blue-fluid-background_53876-114597.jpg?t=st=1704243105~exp=1704243705~hmac=284c380ec033bcdb8182010f803ef886b4ce5d63907d0d527b75cb1181409fe3');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -16,14 +17,23 @@ body{
 	background-size: cover;
 }
 
-main{
+main {
 	background-color: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(40px);
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
-main > #base > #img{
-	height: 75vh;
+main>#slider {
+	overflow: hidden;
+	width: 25rem;
+	height: 25rem;
+	align-self: center;
+}
+
+main>#slider>#img {
+	height: 90%;
 	overflow: hidden;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -32,28 +42,28 @@ main > #base > #img{
 	justify-items: center;
 }
 
-main > #base > #img > img {
+main>#slider>#img>img {
 	width: 100%;
 	border-radius: .5em;
 	margin: .5em;
 	transition: 0.6s ease-in-out;
 }
 
-main > #base > #img > .in {
+main>#slider>#img>.in {
 	animation: slide-in 1s forwards;
 }
 
-main > #base > #img > .out {
+main>#slider>#img>.out {
 	animation: slide-out 1s;
 }
 
-main > #base > #points{
+main>#slider>#points {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
 
-main > #base > #points > span{
+main>#slider>#points>span {
 	padding: .5em .75em;
 	margin: .15em;
 	border-radius: 1em;
@@ -61,55 +71,67 @@ main > #base > #points > span{
 	color: black;
 }
 
-@keyframes slide-in{
-	from{
+@keyframes slide-in {
+	from {
 		transform: translate(100%);
-	}to{
+	}
+
+	to {
 		transform: translate(0%);
 	}
 }
 
-@-webkit-keyframes slide-in{
-	from{
+@-webkit-keyframes slide-in {
+	from {
 		transform: translate(100%);
-	}to{
+	}
+
+	to {
 		transform: translate(0%);
 	}
 }
 
-@-moz-keyframes slide-in{
-	from{
+@-moz-keyframes slide-in {
+	from {
 		transform: translate(100%);
-	}to{
+	}
+
+	to {
 		transform: translate(0%);
 	}
 }
 
-@keyframes slide-out{
-	from{
+@keyframes slide-out {
+	from {
 		transform: translate();
-	}to{
+	}
+
+	to {
 		transform: translate(-100%);
 	}
 }
 
-@-webkit-keyframes slide-out{
-	from{
+@-webkit-keyframes slide-out {
+	from {
 		transform: translate(0%);
-	}to{
+	}
+
+	to {
 		transform: translate(-100%);
 	}
 }
 
-@-moz-keyframes slide-out{
-	from{
+@-moz-keyframes slide-out {
+	from {
 		transform: translate(0%);
-	}to{
+	}
+
+	to {
 		transform: translate(-100%);
 	}
 }
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 720px) {
 	main {
 		background-image: url('https://img.freepik.com/free-vector/blue-fluid-background-frame_53876-99019.jpg?w=360&t=st=1704275008~exp=1704275608~hmac=3542aa87448474a94fd894a188be218516e312687541e9e2120c5abe95aa5549');
 		background-position: center;
