@@ -1,59 +1,61 @@
-function createFormat(){
+function createFormat(sudoku){
   let startCharacter = 97
   for(let i = 0; i < 9; i++){
     for(let j = 0; j < 9; j++){
-      let display = document.createElement("label")
-      let input = document.createElement("input")
+      // let display = document.createElement("label")
+      // let input = document.createElement("input")
       
-      input.type = "number"
-      input.id = `${97 + i}-${97 + j}`
-      input.max = 9
-      input.min = 1
-      input.style.width = "100%"
-      input.style.height = "100%"
-      input.style.fontSize = "1.5rem"
-      input.style.textAlign = "center"
-      display.appendChild(input)
-      document.getElementById("sudoku").appendChild(display)
+      // input.type = "number"
+      // input.id = `${97 + i}-${97 + j}`
+      // input.max = 9
+      // input.min = 1
+      // input.style.width = "100%"
+      // input.style.height = "100%"
+      // input.style.fontSize = "1.5rem"
+      // input.style.textAlign = "center"
+      // display.appendChild(input)
+      // document.getElementById("sudoku").appendChild(display)
+      let p = document.createElement("label")
+      try{
+        p.textContent = sudoku[i][j]
+      }catch(e){
+        p.textContent = "0"
+      }
+      document.getElementById("sudoku").appendChild(p)
     }
   }
 }
 
-function isInLine(sudoku, y, block, position, number){
-  let inLine = false
-  if(y.includes(number)){
-    return true
-  }else{
-    
-      for(let i = 0; i < 9; i++){
-        let c = sudoku[i]
-        if(c[0][block] == number || c[1][block] == number || c[2][block] == number || c[3][block] == number || c[4][block] == number || c[5][block] == number || c[6][block] == number || c[7][block] == number || c[8][block] == number){
-          return true
-        }
-      }
-    //}
+function vertical(sudoku, p, n){
+  let x = false
+  for(let i = sudoku.length - 1; i > 0; i--){
+    if(sudoku[i][p] == n){
+      console.log(i + " - " + p + " - " + n)
+      console.log(sudoku.length)
+      x = true
+      break
+    }
   }
-  return false
+  return x
 }
 
 function createNumbers(){
   let sudoku = []
   for(let i = 0; i < 9; i++){
-    let y = []
+    let x = []
     for(let j = 0; j < 9; j++){
-      let x = Math.floor(Math.random() * 9) + 1
-      if(!isInLine(sudoku, y, j, i, x)){
-        y.push(x)
-      }else{
-        j--
+      let n = Math.floor(Math.random() * 9) + 1
+      while(x.includes(n) || vertical(sudoku, j, n)){
+        n = Math.floor(Math.random() * 9) + 1
       }
+      x.push(n)
     }
-    sudoku.push(y)
+    sudoku.push(x)
   }
   return sudoku
 }
 
 window.onload = () => {
-  createFormat()
+  createFormat(createNumbers())
   console.log(createNumbers())
 }

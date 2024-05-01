@@ -11,13 +11,17 @@
   display: grid;
   grid-template-columns: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
   grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem;
-  grid-gap: .225rem;
+  grid-gap: 0.225rem;
 }
 
-#sudoku>* {
+#sudoku > * {
+  display: flex;
   border: 1px black solid;
   margin: 1rem;
   width: 3rem;
   height: 3rem;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
