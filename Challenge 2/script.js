@@ -40,10 +40,9 @@ function createNumbers(){
     let x = []
     for(let j = 0; j < 9; j++){
       let n = Math.floor(Math.random() * 9) + 1
-      while(x.includes(n)){ // || vertical(sudoku, j, n)){
-        n = Math.floor(Math.random() * 9) + 1
+      if(x.includes(n) || vertical(sudoku, j, n)){
+        x.push(n)
       }
-      x.push(n)
     }
     sudoku.push(x)
   }
