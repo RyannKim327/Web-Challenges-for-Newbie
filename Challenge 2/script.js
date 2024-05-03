@@ -27,16 +27,11 @@ function createFormat(sudoku){
 }
 
 function vertical(sudoku, p, n){
-  let x = false
-  for(let i = sudoku.length - 1; i > 0; i--){
-    if(sudoku[i][p] == n){
-      console.log(i + " - " + p + " - " + n)
-      console.log(sudoku.length)
-      x = true
-      break
-    }
+  let x = []
+  for(let i = 0; i < sudoku.length; i++){
+    x.push(sudoku[i][p])
   }
-  return x
+  return x.includes(n)
 }
 
 function createNumbers(){
@@ -45,7 +40,7 @@ function createNumbers(){
     let x = []
     for(let j = 0; j < 9; j++){
       let n = Math.floor(Math.random() * 9) + 1
-      while(x.includes(n) || vertical(sudoku, j, n)){
+      while(x.includes(n)){ // || vertical(sudoku, j, n)){
         n = Math.floor(Math.random() * 9) + 1
       }
       x.push(n)
