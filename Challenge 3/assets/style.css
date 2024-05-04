@@ -21,6 +21,7 @@ body > main > form {
   box-shadow: 3px 3px 5px #bebec0;
   border-radius: 0.25rem;
   padding: 0.25rem;
+  height: 50%;
 }
 
 body > main > form > * {
@@ -53,4 +54,9 @@ body > main > div > #todos > * {
   background-color: transparent;
   width: 100%;
   box-sizing: none;
+}
+
+body > main > div > #todos > .done {
+  background-color: #ceffa0;
+  box-shadow: none;
 }

@@ -18,10 +18,13 @@ const updateData = (newData) => {
   localStorage.setItem("todo", JSON.stringify(newData))
 }
 
+let update_ = false
+
 const input = document.getElementById("name")
 const lists = document.getElementById("todos")
 
 function reload(){
+  lists.innerHTML = ""
   const list1 = data()
   const list = list1['data']
   for(let i = 0; i < list.length; i++){
@@ -31,7 +34,9 @@ function reload(){
     const content = document.createElement("p")
 
     parent.classList.add("todo")
-
+    if(todo['done']){
+      parent.classList.add("done")
+    }
     title.textContent = todo['title']
     content.textContent = todo['content']
 
@@ -40,22 +45,35 @@ function reload(){
     lists.appendChild(parent)
     
     parent.addEventListener("click", () => {
-      if(confirm("Confirmation", "Is this update?")){
-        const form = document.getElementById("form")
-        const title = document.getElementById("name")
-        const content = document.getElementById("content")
+      const _ = parseInt(prompt("1. Edit\n2. Update", ""))
+      update_ = true
+      switch(_){
+        case 1:
+          const form = document.getElementById("form")
+          const title = document.getElementById("name")
+          const content = document.getElementById("content")
         
-        title.value = todo['title']
-        content.value = todo['content']
+          title.value = todo['title']
+          content.value = todo['content']
 
-        form.addEventListener("submit", () => {
-          list1['data'][i]['title'] = title.value
-          list1['data'][i]['content'] = content.value
-          updateData(list1)
-        })
-      }else{
-        
+          form.addEventListener("submit", () => {
+            list1['data'][i]['title'] = title.value
+            list1['data'][i]['content'] = content.value
+            if(update_){
+              updateData(list1)
+              update_ = false
+            }
+          })
+        break
+        case 2:
+          if(update_){
+            list1['data'][i]['done'] = true
+            updateData(list1)
+            update_ = false
+          }
+        break
       }
+      reload()
     })
   }
   return list1
@@ -63,19 +81,21 @@ function reload(){
  
 function update () {
   const d = reload()
-  console.log(d)
   const form = document.getElementById("form")
   const title = document.getElementById("name")
   const content = document.getElementById("content")
 
   form.addEventListener("submit", () => {
-    d['data'].push({
-      "title": title.value,
-      "content": content.value
-    })
-    alert("Data was saved")
-    updateData(d)
-    update()
+    if(!update_){
+      d['data'].push({
+        "title": title.value,
+        "content": content.value,
+        "done": false
+      })
+      alert("Data was saved")
+      updateData(d)
+      update()
+    }
   })
 }
 
