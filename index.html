@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web challenges for newbies</title>
     <style>
-      *{
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      main{
+      main {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,17 +20,17 @@
       div {
         border-radius: 0.25rem;
         box-shadow: 3px 3px 10px #bebec0;
-        padding: .5rem;
-        margin: .5rem; 
+        padding: 0.5rem;
+        margin: 0.5rem;
       }
       ul > li {
         cursor: pointer;
         list-style: none;
         border-bottom: 2px transparent solid;
-        transition: ease .5s;
+        transition: ease 0.5s;
       }
-      ul > li:nth-child(odd){
-        margin: .25rem 0;
+      ul > li:nth-child(odd) {
+        margin: 0.25rem 0;
       }
       ul > li:hover {
         border-bottom: 2px black solid;
@@ -39,7 +39,6 @@
   </head>
   <body>
     <main>
-      <!-- center div -->
       <div>
         <h3>Welcome to Challenges for newbies</h3>
         <ul id="items">
@@ -52,15 +51,15 @@
     </main>
   </body>
   <script>
-    const base = document.getElementById("items")
-    const child = base.children
-    for(let i = 0; i < child.length; i++){
-      const c = child[i]
+    const base = document.getElementById("items");
+    const child = base.children;
+    for (let i = 0; i < child.length; i++) {
+      const c = child[i];
       c.addEventListener("click", () => {
-        if(c.textContent != ""){
-          location.href = `/Challenge ${i + 1}`
+        if (c.textContent != "") {
+          location.href = `/Challenge ${i + 1}`;
         }
-      })
+      });
     }
   </script>
 </html>
