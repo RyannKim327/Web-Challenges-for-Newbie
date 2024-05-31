@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Calculator App</h1>
+      <div class="form">
+        <input
+          style="grid-area: r"
+          type="text"
+          id="result"
+          placeholder="Enter your equation"
+          disabled
+        />
+        <input
+          style="grid-area: z"
+          type="button"
+          value="0"
+          onclick="appendNumber(0)"
+          class="button"
+        />
+        <input
+          style="grid-area: o"
+          type="button"
+          value="1"
+          onclick="appendNumber(1)"
+          class="button"
+        />
+        <input
+          style="grid-area: t"
+          type="button"
+          value="2"
+          onclick="appendNumber(2)"
+          class="button"
+        />
+        <input
+          style="grid-area: th"
+          type="button"
+          value="3"
+          onclick="appendNumber(3)"
+          class="button"
+        />
+        <input
+          style="grid-area: f"
+          type="button"
+          value="4"
+          onclick="appendNumber(4)"
+          class="button"
+        />
+        <input
+          style="grid-area: fi"
+          type="button"
+          value="5"
+          onclick="appendNumber(5)"
+          class="button"
+        />
+        <input
+          style="grid-area: s"
+          type="button"
+          value="6"
+          onclick="appendNumber(6)"
+          class="button"
+        />
+        <input
+          style="grid-area: se"
+          type="button"
+          value="7"
+          onclick="appendNumber(7)"
+          class="button"
+        />
+        <input
+          style="grid-area: e"
+          type="button"
+          value="8"
+          onclick="appendNumber(8)"
+          class="button"
+        />
+        <input
+          style="grid-area: n"
+          type="button"
+          value="9"
+          onclick="appendNumber(9)"
+          class="button"
+        />
+        <input
+          style="grid-area: p"
+          type="button"
+          value="+"
+          onclick="operator('+')"
+          class="button"
+        />
+        <input
+          style="grid-area: m"
+          type="button"
+          value="-"
+          onclick="operator('-')"
+          class="button"
+        />
+        <input
+          style="grid-area: mu"
+          type="button"
+          value="*"
+          onclick="operator('*')"
+          class="button"
+        />
+        <input
+          style="grid-area: d"
+          type="button"
+          value="/"
+          onclick="operator('/')"
+          class="button"
+        />
+        <input
+          style="grid-area: eq"
+          type="button"
+          value="="
+          onclick="equals()"
+          class="button"
+        />
+        <input
+          style="grid-area: c; box-sizing: border-box"
+          type="button"
+          value="C"
+          onclick="clearInput()"
+          class="button"
+        />
+        <input
+          style="grid-area: b; box-sizing: border-box"
+          type="button"
+          value="CE"
+          onclick="backspace()"
+          class="button"
+        />
+        <input
+          style="grid-area: do"
+          type="button"
+          value="."
+          onclick="appendNumber('.')"
+          class="button"
+        />
+      </div>
+    </main>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

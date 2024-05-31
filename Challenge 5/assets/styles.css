@@ -1,0 +1,55 @@
+:root {
+  --main-bg: #131320;
+  --main-color: #1eae72;
+  --main-border: #259c4f;
+}
+body {
+  background-color: #0d1e2b;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color: var(--main-color);
+}
+
+.form {
+  background-color: var(--main-bg);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.form > #result {
+  background-color: transparent;
+  border: 1px var(--main-border) solid;
+  border-radius: 0.15rem 0.25rem;
+  box-sizing: border-box;
+  color: var(--main-color);
+  width: 100%;
+  padding: 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.form {
+  padding-top: 0.5rem;
+  display: grid;
+  grid-template-areas:
+    "r r r b"
+    "c c d mu"
+    "se e n m"
+    "f fi s p"
+    "o t th p"
+    "z do eq p";
+  grid-gap: 0.15rem;
+}
+
+.form > .button {
+  background-color: transparent;
+  border: 1px var(--main-border) solid;
+  color: var(--main-color);
+  border-radius: 0.25rem;
+  padding: 0.15rem 1rem;
+  font-size: 1.5rem;
+}

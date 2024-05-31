@@ -46,6 +46,7 @@
           <li>Sudoku [Incomplete]</li>
           <li>Todo List</li>
           <li>Image to background</li>
+          <li>Calculator</li>
         </ul>
       </div>
     </main>
@@ -57,7 +58,7 @@
       const c = child[i];
       c.addEventListener("click", () => {
         if (c.textContent != "") {
-          location.href = `/Challenge ${i + 1}`;
+          location.href = `Challenge ${i + 1}`;
         }
       });
     }
