@@ -29,7 +29,7 @@ function operator(o){
 
 function equals(){
   let val = eval(`${currentInput}${currentValue}`);
-  if(!val){
+  if(!val && val != 0){
     val = "Error";
   }
   result.value = val;
