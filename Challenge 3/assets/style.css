@@ -11,52 +11,76 @@ body > main {
   display: flex;
   flex-direction: row;
   padding: 0.5rem;
-}
 
-body > main > form {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  box-sizing: border-box;
-  box-shadow: 3px 3px 5px #bebec0;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  height: 50%;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 5px #bebec0;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    height: 50%;
 
-body > main > form > * {
-  margin: 0.15rem;
-  border: none;
-  box-shadow: 0 1px 3px #cab3c0de;
-  background-color: transparent;
-}
+    * {
+      margin: 0.15rem;
+      border: none;
+      font-size: 1.5rem;
+      box-shadow: 0 1px 3px #cab3c0de;
+      background-color: transparent;
+    }
+  }
 
-body > main > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: center;
-  width: 70%;
-  box-sizing: border-box;
-}
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 70%;
+    box-sizing: border-box;
 
-body > main > div > #todos {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 0.5rem;
-}
+    #todos {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 0.5rem;
 
-body > main > div > #todos > * {
-  margin: 0.25rem;
-  border: 0;
-  padding: 0.25rem;
-  box-shadow: 1px 3px 5px #9a90ca;
-  background-color: transparent;
-  width: 100%;
-  box-sizing: none;
-}
+      .todo {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 0.25rem;
+        border: 0;
+        padding: 0.5rem;
+        box-shadow: 1px 3px 5px #9a90ca;
+        background-color: transparent;
+        width: 100%;
+        text-align: left;
+        box-sizing: border-box;
+        transition: height 2s;
 
-body > main > div > #todos > .done {
-  background-color: #ceffa0;
-  box-shadow: none;
+        h3 {
+          margin: 0 0.75rem;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        p {
+          display: none;
+          width: 100%;
+          box-sizing: border-box;
+          max-height: 5rem;
+          overflow-y: scroll;
+        }
+      }
+
+      :hover p {
+        display: block;
+      }
+
+      .done {
+        background-color: #ceffa0;
+        box-shadow: none;
+      }
+    }
+  }
 }
