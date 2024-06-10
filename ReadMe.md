@@ -22,4 +22,3 @@
 ### Disclaimer
 > All projects and activities indicated in this project are all coded with the help of internet, I didn't own something from it.
 
-
