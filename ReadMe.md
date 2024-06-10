@@ -18,4 +18,8 @@
 ### Inspiration
 > The development and inspiration of this repository is just a challenge from the combination of our subject IPT101 and Sir Mesiera's Javascript Coding Challenges. As I tried to expand my knowledge as I can, and explore different solutions in different problems given.
 
+---
+### Disclaimer
+> All projects and activities indicated in this project are all coded with the help of internet, I didn't own something from it.
+
 
