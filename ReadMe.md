@@ -13,6 +13,7 @@
 4. Click Image to make as background
 5. Calculator
 6. Login Test with Middleware
+7. Registration Panel with Password Generator
 
 ---
 ### Inspiration
