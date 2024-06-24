@@ -37,6 +37,7 @@ div {
         justify-content: center;
 
         > img {
+          text-align: center;
           background-color: #dedede;
           border-radius: 0.5rem;
           width: 15rem;
@@ -46,16 +47,37 @@ div {
       }
 
       > #__photo {
+        display: flex;
         margin-top: -25%;
         border-radius: 50%;
         aspect-ratio: 1 / 1;
         width: 7rem;
+        box-sizing: border-box;
+        justify-items: center;
+        align-items: center;
+        justify-content: content;
+        align-content: center;
 
         > img {
+          text-align: center;
           background-color: #dedede;
           border-radius: 50%;
           aspect-ratio: 1 / 1;
           width: 7rem;
+          height: 7rem;
+        }
+      }
+    }
+    > .basic-info {
+      > nav {
+        > ul {
+          display: flex;
+          flex-direction: row;
+
+          > li {
+            list-style: none;
+            padding: 0 0.5rem;
+          }
         }
       }
     }
