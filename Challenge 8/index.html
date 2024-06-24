@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Editor</title>
+    <link href="assets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <main>
+        <div id="head">
+          <label for="_cover" id="__cover">
+            <input
+              onchange="chooseImage(this, 'cover')"
+              type="file"
+              id="_cover"
+              style="display: none"
+            />
+            <img id="cover" alt="Cover Photo" />
+          </label>
+          <label for="_photo" id="__photo">
+            <input
+              onclick="chooseImage(this, 'photo')"
+              type="file"
+              id="_photo"
+              style="display: none"
+            />
+            <img id="photo" alt="Profile Photo" />
+          </label>
+        </div>
+        <h3 style="text-align: center" contenteditable="true">Name</h3>
+      </main>
+    </div>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
