@@ -81,5 +81,26 @@ div {
         }
       }
     }
+    > .main-sections {
+      > div {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+
+        > span {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-content: space-between;
+          box-sizing: border-box;
+          width: 100%;
+
+          > span[contenteditable="true"] {
+            border-bottom: 2px #000000 solid;
+          }
+        }
+      }
+    }
   }
 }
