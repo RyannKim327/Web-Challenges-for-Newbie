@@ -15,6 +15,7 @@
 6. Login Test with Middleware
 7. Registration Panel with Password Generator
 8. Profile Layout
+9. Calenday (Yearly)
 
 ---
 ### Inspiration
