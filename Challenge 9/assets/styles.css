@@ -10,9 +10,30 @@
 #base-calendar {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  gap: 0.5rem;
 
-  .calendars {
-    display: grid;
-    grid-template-columns: 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px #000000 solid;
+
+    > h3 {
+      width: 100%;
+      padding: 0 0.5rem;
+      text-align: left;
+    }
+
+    > .calendars {
+      display: grid;
+      grid-template-columns: 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem 2.5rem;
+      gap: 0.25rem;
+
+      > .dates {
+        border: 1px #000000 solid;
+        text-align: right;
+      }
+    }
   }
 }

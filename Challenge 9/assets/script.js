@@ -1,7 +1,7 @@
 window.onload = () => {
   let date = new Date()
   
-  function reload(year, month){
+  function reload(year, month, frame){
     let __date = new Date([year, month + 1, 1])
     let _date = new Date(year, month + 1, 0)
     const base = document.createElement("div")
@@ -28,12 +28,21 @@ window.onload = () => {
       base.appendChild(p)
     }
 
-    document.getElementById("base-calendar").appendChild(base)
+    frame.appendChild(base)
   }
   
 
   let year = date.getFullYear()
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ]
   for(let i = 0; i < 12; i++){
-    reload(year, i)
+    const base = document.createElement("div")
+    const month = document.createElement("h3")
+    month.textContent = months[i]
+    base.appendChild(month)
+    reload(year, i, base)
+    document.getElementById("base-calendar").appendChild(base)
   }
 }
