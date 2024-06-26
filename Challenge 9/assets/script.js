@@ -19,7 +19,7 @@ window.onload = () => {
       base.appendChild(p)
     }
 
-    for(let i = 0; i <= (_date.getDate() + __date.getDay()); i++){
+    for(let i = 0; i < (_date.getDate() + __date.getDay()); i++){
       const p = document.createElement("p")
       if(i >= __date.getDay()){
         p.textContent = (i - __date.getDay()) + 1
