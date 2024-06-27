@@ -1,0 +1,116 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+}
+
+.platform {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5rem 0;
+
+  > .base {
+    > i {
+      font-size: 10rem;
+      padding: 1rem;
+    }
+  }
+
+  > #b-play {
+    padding-left: 3rem;
+
+    > .fa-hand-back-fist {
+      transform: rotate(90deg);
+    }
+
+    > .fa-hand-scissors {
+      transform: scaleX(-1);
+    }
+    > .fa-hand {
+      transform: rotate(90deg);
+    }
+  }
+
+  > #b-bot {
+    padding-right: 3rem;
+
+    > .fa-hand-back-fist {
+      transform: rotate(90deg) scaleY(-1);
+    }
+
+    > .fa-hand {
+      transform: scaleY(-1) rotate(-90deg);
+    }
+  }
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+
+  > span {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 5px #000000;
+
+    > i {
+      font-size: 8rem;
+    }
+    > .fa-hand-back-fist {
+      transform: rotate(90deg);
+    }
+    > .fa-hand-scissors {
+      transform: scaleX(-1);
+    }
+    > .fa-hand {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.p-anim {
+  animation: p-rotate 2s 1s;
+}
+
+.b-anim {
+  animation: b-rotate 2s 1s;
+}
+
+@keyframes p-rotate {
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  85% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes b-rotate {
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+  85% {
+    transform: rotate(0deg);
+  }
+}
