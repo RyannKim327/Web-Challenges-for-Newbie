@@ -80,7 +80,13 @@ function game(_player){
     bot.classList.add(items[_bot])
     score_player += (_ * -1)
     score_bot += _
-    document.getElementById("score").textContent = `${score_player} < P : B > ${score_bot}`
+    let c = ":"
+    if(score_player >= 10){
+      c = "Player Wins"
+    }else if(score_player <= 0){
+      c = "Bot Wins"
+    }
+    document.getElementById("score").textContent = `${score_player} < P ${c} B > ${score_bot}`
   }, 2500)
 }
 

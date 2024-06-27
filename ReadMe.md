@@ -16,6 +16,7 @@
 7. Registration Panel with Password Generator
 8. Profile Layout
 9. Calenday (Yearly)
+10. Rock Paper and Scissor Game
 
 ---
 ### Inspiration
